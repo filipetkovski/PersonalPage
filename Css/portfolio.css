@@ -1,0 +1,198 @@
+.portfolio {
+    background-color: #1c1d24;
+}
+
+.cv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+#portfolio {
+    padding-bottom: 100px;
+    background-color: #131416;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 100px;
+    column-gap: 30px;
+    color: white;
+    row-gap: 30px;
+}
+
+.portfolio-header {
+    font-size: 3.2em;
+    font-weight: bold;
+    margin: 0;
+    border-bottom: 5px solid #d78c00;
+    padding-bottom: 10px;
+    border-bottom-style: wave;
+}
+
+.portfolio-header + p {
+    color: gray;
+    font-size: 1em;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.java-scrolling {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.java-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.java-buttons button {
+    margin: 10px 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.container-all, .container-product,
+.container-projects, .container-media {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+.container {
+    background-color: #1c1d24;
+    padding: 20px;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.con__img {
+    margin-top: 20px;
+    background-color: transparent;
+    transition: 0.5s;
+    opacity: 0.5;
+    filter: blur(5px);
+}
+
+.con__img img {
+    width: 380px;
+    height: 450px;
+}
+
+.container h3, .container p {
+    margin: 0 0 10px 0;
+    font-size: 0.9em;
+    color: gray;
+    transition: 0.5s;
+}
+
+.container h3 {
+    font-size: 1.2em;
+    color: white;
+}
+
+.java-buttons button:nth-of-type(1) {
+    border-bottom: 3px solid orange;
+}
+
+.container-product, .container-projects,
+.container-media {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .edu-sub {
+        font-size: 0.6em;
+    }
+    .edu-name {
+        font-size: 0.8em;
+    }
+    .edu-year {
+        font-size: 0.7em;
+    }
+    .container-all, .container-product,
+    .container-projects, .container-media {
+        grid-template-columns: 1fr 1fr;
+    }
+    .education, .experience, .skills {
+        height: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container-all, .container-product,
+    .container-projects, .container-media {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-header + p {
+        font-size: 0.9em;
+        margin: 0;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .java-buttons button {
+        font-size: 0.8em;
+        margin: 10px;
+    }
+    .portfolio-header {
+        font-size: 2.8em;
+    }
+    .portfolio-header + p {
+        font-size: 0.8em;
+        margin: 0;
+    }
+    .con__img img {
+        width: 300px;
+        height: 350px;
+    }
+}
+
+@media (hover: hover) {
+    .container:hover a {
+        color: orange;
+    }
+
+    .container:hover h3 {
+        color: orange;
+        border-left: 3px solid #ce8500;
+        padding-left: 5px;
+        transform: translateX(10px);
+        margin-right: 0;
+    }
+    .container:hover > div {
+        opacity: 1;
+        transform: translateY(-5px);
+        filter: blur(0);
+    }
+}
+
+@media (hover: none) {
+    .con__img {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    .container h3 {
+        color: orange;
+    }
+}

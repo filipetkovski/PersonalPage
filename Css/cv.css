@@ -1,0 +1,199 @@
+#cv {
+    background-color: #131416;
+    padding-bottom: 75px;
+}
+
+#cv > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 50px;
+    padding: 80px 60px;
+}
+
+.section {
+    color: white;
+    font-size: 1.8em;
+    transition: 0.5s;
+}
+
+.section > div:nth-of-type(1) {
+    margin-bottom: 20px;
+    border-bottom: 5px solid #ce8500;
+    padding-bottom: 7px;
+    width: 30px;
+    transition: 1s;
+}
+
+.education, .experience, .skills {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.skills, .experience, .education {
+    background-color: #1c1d24;
+    height: 600px;
+    border-top-right-radius: 30px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+.education {
+    background-color: #ce8500;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.cv-content {
+    font-size: 0.6em;
+    border-bottom: 1px dotted white;
+    margin: 20px 15px 0 15px;
+    padding-bottom: 20px;
+    flex: 1;
+}
+
+.cv-content:nth-of-type(3) {
+    border: none;
+}
+
+.cv-content h3, .cv-content p {
+    margin: 0;
+}
+
+
+.cv-content p:nth-of-type(1) {
+    margin-bottom: 10px;
+}
+
+.cv-content h3{
+    margin-bottom: 15px;
+}
+
+.cv-year {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: #1c1d24;
+    border-radius: 50px;
+    font-size: 0.8em;
+}
+
+.cv-sub {
+    font-size: 0.8em;
+    color: gray;
+}
+
+.education .cv-sub {
+    color: white;
+}
+
+.cv-name {
+    font-size: 1.1em;
+}
+
+.experience .cv-content {
+    border: none;
+}
+
+.experience .cv-year {
+    background-color: #ce8500;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.ski {
+    margin: 20px 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+}
+
+.ski h3, .ski p {
+    margin: 0;
+}
+
+.ski h3 {
+    font-size: 0.6em;
+}
+
+.ski p {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    font-size: 0.5em;
+    margin-bottom: 2px;
+}
+
+.ski div {
+    height: 10px;
+    background-color: #ce8500;
+    border-top-right-radius: 10px;
+}
+
+.ski:nth-of-type(1) div {
+    width: 90%;
+}
+.ski:nth-of-type(2) div {
+    width: 70%;
+}
+.ski:nth-of-type(3)  div{
+    width: 60%;
+}
+.ski:nth-of-type(4) div {
+    width: 30%;
+}
+.ski:nth-of-type(5) div {
+    width: 60%;
+}
+
+@media  (hover: hover) {
+    .section:hover .section-heading {
+        width: 100%;
+    }
+    .section:hover .education, .section:hover .experience, .section:hover .skills {
+        transform: translateY(15px);
+    }
+}
+
+@media (min-width: 2200px) {
+    .education, .skills, .experience {
+        height: 700px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .section {
+        font-size: 1.6em;
+    }
+
+    .skills, .experience, .education {
+        height: 520px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .section {
+        font-size: 1.8em;
+    }
+    #cv > div {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 800px) {
+    .section {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        font-size: 1.8em;
+    }
+    #cv > div {
+        grid-template-columns: 1fr;
+    }
+}
+
