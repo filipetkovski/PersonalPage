@@ -128,7 +128,7 @@
         font-size: 1.7em;
     }
 
-    .about div {
-        font-size: 0.7em;
+    .about {
+        grid-template-columns: 1fr;
     }
 }
